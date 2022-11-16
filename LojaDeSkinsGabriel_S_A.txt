@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int escolha;
+    float valorTotal,quantidade;
+    int x = 1;
+
+    while(x != 2)
+    {
+        if (valorTotal > 0)
+        {
+
+            printf("\n Carrinho: R$ %.2f \n",valorTotal);
+        }
+        printf("\n Bem vindo(a) a loja de skins mais famosa do Brasil!\n");
+        printf ("===================================================");
+        printf("\n Selecione a skin desejada: \n 1- Karambit Lore \n 2- Butterfly Doppler \n 3- AWP Wild Fire \n 4- AK-47 Imperatriz \n 5- M4A4 Neo-Noir");
+        printf ("\n ===================================================");
+        printf ("\n 007- Sair");
+        printf ("\n ===================================================\n");
+        scanf ("%d",&escolha);
+
+        system ("cls");
+
+        switch (escolha)
+        {
+
+
+        case 1 :
+            printf ("\n Karambit Lore \n O valor desta skin e de: R$ 8004.80");
+            printf ("\n Quantos deste produto gostaria de comprar?: ");
+            scanf("%f", &quantidade);
+            valorTotal = valorTotal + (quantidade * 8004.80);
+            break;
+
+        case 2:
+            printf ("\n Butterfly Doppler \n O valor desta skin e de: R$ 7400.00");
+            printf ("\n Quantos deste produto gostaria de comprar?: ");
+            scanf("%f", &quantidade);
+            valorTotal = valorTotal + (quantidade * 7400.00);
+            break;
+
+        case  3:
+            printf ("\n AWP Wild Fire \n O valor desta skin e de: R$ 459.00");
+            printf ("\n Quantos deste produto gostaria de comprar?: ");
+            scanf("%f", &quantidade);
+            valorTotal = valorTotal + (quantidade * 459.00);
+            break;
+
+        case 4:
+            printf ("\n AK-47 Imperatriz \n O valor desta skin e de: R$ 188.70");
+            printf ("\n Quantos deste produto gostaria de comprar?: ");
+            scanf("%f", &quantidade);
+            valorTotal = valorTotal + (quantidade * 188.70);
+            break;
+
+        case 5:
+            printf ("\n M4A4 Neo-Noir \n O valor desta skin e de: R$ 159.80");
+            printf ("\n Quantos deste produto gostaria de comprar?");
+            scanf("%f", &quantidade);
+            valorTotal = valorTotal + (quantidade * 159.70);
+            break;
+
+        case 007:
+
+            x = 2;
+            printf ("Saindo...Volte sempre!");
+            sleep(2);
+            exit(0);
+            break;
+
+        default:
+            printf ("Valor invalido!");
+            break;
+
+
+
+        }
+
+    }
+
+
+    return 0;
+}
